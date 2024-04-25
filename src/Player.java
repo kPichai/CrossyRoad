@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.awt.*;
 
 public class Player extends GameObject {
@@ -5,11 +6,14 @@ public class Player extends GameObject {
     private int health;
     private EggBlaster eggBlaster;
 
-    public Player(int x, int y, int dx, int dy, boolean isPlayerOne, int health) {
+    private Image image;
+
+    public Player(int x, int y, int dx, int dy, boolean isPlayerOne) {
         super(x, y, dx, dy, true);
         this.isPlayerOne = isPlayerOne;
-        this.health = health;
-        eggBlaster = new EggBlaster(FINISH THIS PART);
+        this.health = 1;
+        image = new ImageIcon("Resources/player_icon.png").getImage();
+        eggBlaster = new EggBlaster(this.getX(), this.getY(), 0, 0);
     }
 
     public boolean isPlayerOne() {
@@ -24,7 +28,7 @@ public class Player extends GameObject {
         this.health = health;
     }
 
-    public void drawPlayer(Graphics g) {
-
+    public void drawPlayer(Graphics g, CrossyRoadViewer window) {
+        g.drawImage(image, getX(), getY(), 50, 50, window);
     }
 }
