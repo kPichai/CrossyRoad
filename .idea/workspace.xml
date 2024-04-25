@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a7f3-ad89-433e-a4a4-8d26130804b4" name="Changes" comment="started all the classes.">
-      <change afterPath="$PROJECT_DIR$/Resources/car_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/player_icon.png" afterDir="false" />
+    <list default="true" id="dc33a7f3-ad89-433e-a4a4-8d26130804b4" name="Changes" comment="Added movement and more cars / that repeat infinitely.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrossyRoad.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CrossyRoad.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CrossyRoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrossyRoad.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CrossyRoadViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrossyRoadViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EggBlaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EggBlaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Obstacle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Obstacle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,11 +93,20 @@
       <option name="project" value="LOCAL" />
       <updated>1713747932521</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added movement and more cars / that repeat infinitely.">
+      <option name="closed" value="true" />
+      <created>1714006285619</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714006285619</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="started all the classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="started all the classes." />
+    <MESSAGE value="Added movement and more cars / that repeat infinitely." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added movement and more cars / that repeat infinitely." />
   </component>
 </project>

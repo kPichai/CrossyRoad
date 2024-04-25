@@ -38,20 +38,40 @@ public class CrossyRoadViewer extends JFrame {
         g.fillRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
     }
 
-    public void drawGameState(Graphics g) {
+    public void displayCenteredText(Graphics g, String text, int width, int height, int xPos, int yPos, int yShift) {
+        int w = width;
+        int h = height;
+        // Uses FontMetrics object to get properties about the current font such as pixel height and total string width
+        FontMetrics metrics = g.getFontMetrics(g.getFont());
+        // Calculates correct x and y position such that the center of the text is centered in the chosen box
+        int x = xPos + (w - metrics.stringWidth(text)) / 2;
+        int y = yPos + ((h - metrics.getHeight()) / 2) + metrics.getAscent();
+        // Prints the string onto the window using the calculated x and y coordinates as well as the vertical shift
+        g.drawString(text, x, y - yShift);
+    }
 
+    public void drawGameState(Graphics g) {
+        int state = game.getGameState();
+        if (state == 0) {
+            g.drawRoundRect(200, 200, WINDOW_WIDTH-400, WINDOW_HEIGHT-400, 50, 50);
+            g.setColor(Color.LIGHT_GRAY);
+            g.fillRoundRect(200, 200, WINDOW_WIDTH-400, WINDOW_HEIGHT-400, 50, 50);
+            // TO-DO: Print instructions
+        } else if (state == 1) {
+
+        }
     }
 
     public void myPaint(Graphics g) {
         drawBackground(g);
         drawGameObjects(g);
+        drawGameState(g);
     }
 
     @Override
     public void paint(Graphics g) {
         BufferStrategy bf = this.getBufferStrategy();
         if (bf == null) {
-            System.out.println("Here");
             return;
         }
 

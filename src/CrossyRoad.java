@@ -7,6 +7,7 @@ public class CrossyRoad implements ActionListener, KeyListener {
     private int gameState;
     private Player playerOne;
     private Player playerTwo;
+    private int time;
     private ArrayList<Obstacle> obstaclesToRight;
     private ArrayList<Obstacle> obstaclesToLeft;
     private CrossyRoadViewer window;
@@ -14,6 +15,7 @@ public class CrossyRoad implements ActionListener, KeyListener {
     public CrossyRoad() {
         window = new CrossyRoadViewer(this);
         gameState = 0;
+        time = 0;
         playerOne = new Player(300, 900, 0, 0, true);
         playerTwo = new Player(1427, 900, 0, 0, false);
         // Figure out way to randomize and create all the obstacles
@@ -68,7 +70,7 @@ public class CrossyRoad implements ActionListener, KeyListener {
         }
         for (int i = 0; i < obstaclesToLeft.size(); i++) {
             Obstacle o = obstaclesToLeft.get(i);
-            if (o.getX() < -40) {
+            if (o.getX() < -60) {
                 int y = o.getY();
                 obstaclesToLeft.remove(i);
                 obstaclesToLeft.add(new Obstacle(generateNewCarMovingLeft(obstaclesToLeft.get(obstaclesToLeft.size()-1).getX()), y, -5, 0, 0));
@@ -105,6 +107,10 @@ public class CrossyRoad implements ActionListener, KeyListener {
     }
 
     public void actionPerformed(ActionEvent e) {
+        time += 30;
+        if (time > 11000) {
+            gameState = -1;
+        }
         for (Obstacle o: obstaclesToRight) {
             o.move();
         }
@@ -123,62 +129,64 @@ public class CrossyRoad implements ActionListener, KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
-        switch(e.getKeyCode())
-        {
-            case KeyEvent.VK_W:
-                playerOne.setDy(0);
-                break;
-            case KeyEvent.VK_A:
-                playerOne.setDx(0);
-                break;
-            case KeyEvent.VK_S:
-                playerOne.setDy(0);
-                break;
-            case KeyEvent.VK_D:
-                playerOne.setDx(0);
-                break;
-            case KeyEvent.VK_LEFT:
-                playerTwo.setDx(0);
-                break;
-            case KeyEvent.VK_RIGHT:
-                playerTwo.setDx(0);
-                break;
-            case KeyEvent.VK_UP:
-                playerTwo.setDy(0);
-                break;
-            case KeyEvent.VK_DOWN:
-                playerTwo.setDy(0);
-                break;
+        if (gameState == -1) {
+            switch (e.getKeyCode()) {
+                case KeyEvent.VK_W:
+                    playerOne.setDy(0);
+                    break;
+                case KeyEvent.VK_A:
+                    playerOne.setDx(0);
+                    break;
+                case KeyEvent.VK_S:
+                    playerOne.setDy(0);
+                    break;
+                case KeyEvent.VK_D:
+                    playerOne.setDx(0);
+                    break;
+                case KeyEvent.VK_LEFT:
+                    playerTwo.setDx(0);
+                    break;
+                case KeyEvent.VK_RIGHT:
+                    playerTwo.setDx(0);
+                    break;
+                case KeyEvent.VK_UP:
+                    playerTwo.setDy(0);
+                    break;
+                case KeyEvent.VK_DOWN:
+                    playerTwo.setDy(0);
+                    break;
+            }
         }
     }
 
     public void keyPressed(KeyEvent e) {
-        switch(e.getKeyCode())
-        {
-            case KeyEvent.VK_W:
-                playerOne.setDy(-5);
-                break;
-            case KeyEvent.VK_A:
-                playerOne.setDx(-5);
-                break;
-            case KeyEvent.VK_S:
-                playerOne.setDy(5);
-                break;
-            case KeyEvent.VK_D:
-                playerOne.setDx(5);
-                break;
-            case KeyEvent.VK_LEFT:
-                playerTwo.setDx(-5);
-                break;
-            case KeyEvent.VK_RIGHT:
-                playerTwo.setDx(5);
-                break;
-            case KeyEvent.VK_UP:
-                playerTwo.setDy(-5);
-                break;
-            case KeyEvent.VK_DOWN:
-                playerTwo.setDy(5);
-                break;
+        if (gameState == -1) {
+            switch (e.getKeyCode()) {
+                case KeyEvent.VK_W:
+                    playerOne.setDy(-5);
+                    break;
+                case KeyEvent.VK_A:
+                    playerOne.setDx(-5);
+                    break;
+                case KeyEvent.VK_S:
+                    playerOne.setDy(5);
+                    break;
+                case KeyEvent.VK_D:
+                    playerOne.setDx(5);
+                    break;
+                case KeyEvent.VK_LEFT:
+                    playerTwo.setDx(-5);
+                    break;
+                case KeyEvent.VK_RIGHT:
+                    playerTwo.setDx(5);
+                    break;
+                case KeyEvent.VK_UP:
+                    playerTwo.setDy(-5);
+                    break;
+                case KeyEvent.VK_DOWN:
+                    playerTwo.setDy(5);
+                    break;
+            }
         }
     }
 
