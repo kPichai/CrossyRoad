@@ -11,6 +11,7 @@ public class CrossyRoadViewer extends JFrame {
 
     public CrossyRoadViewer(CrossyRoad game) {
         this.game = game;
+        this.background = new ImageIcon("Resources/game_background.png").getImage();
 
         this.setDefaultCloseOperation(3);
         this.setTitle("--*   1v1 Crossy Roads   *--");
@@ -32,10 +33,7 @@ public class CrossyRoadViewer extends JFrame {
     }
 
     public void drawBackground(Graphics g) {
-        // temporary
-        g.drawRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
-        g.setColor(Color.WHITE);
-        g.fillRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
+        g.drawImage(background,0, 0, WINDOW_WIDTH, WINDOW_HEIGHT, this);
     }
 
     public void displayCenteredText(Graphics g, String text, int width, int height, int xPos, int yPos, int yShift) {
@@ -56,9 +54,26 @@ public class CrossyRoadViewer extends JFrame {
             g.drawRoundRect(200, 200, WINDOW_WIDTH-400, WINDOW_HEIGHT-400, 50, 50);
             g.setColor(Color.LIGHT_GRAY);
             g.fillRoundRect(200, 200, WINDOW_WIDTH-400, WINDOW_HEIGHT-400, 50, 50);
-            // TO-DO: Print instructions
+            g.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 24));
+            g.setColor(Color.BLACK);
+            displayCenteredText(g, "Welcome to 1v1 Crossy Roads!", WINDOW_WIDTH-400, WINDOW_HEIGHT-400, 200, 200, 240);
+            displayCenteredText(g, "There are 2 ways to win, first to the finish line or hit the other player with an egg.", WINDOW_WIDTH-400, WINDOW_HEIGHT-400, 200, 200, 80);
+            displayCenteredText(g, "Player one - Use 'WASD' to move and 'Q' to your the egg blaster", WINDOW_WIDTH-400, WINDOW_HEIGHT-400, 200, 200, -80);
+            displayCenteredText(g, "Player two - Use 'arrows keys' to move and '/' to use your egg blaster", WINDOW_WIDTH-400, WINDOW_HEIGHT-400, 200, 200, -240);
         } else if (state == 1) {
-
+            g.drawRoundRect(300, 300, WINDOW_WIDTH-600, WINDOW_HEIGHT-600, 30, 30);
+            g.setColor(Color.LIGHT_GRAY);
+            g.fillRoundRect(300, 300, WINDOW_WIDTH-600, WINDOW_HEIGHT-600, 30, 30);
+            g.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 46));
+            g.setColor(Color.BLACK);
+            displayCenteredText(g, "Player 1 is the winner! Congrats!", WINDOW_WIDTH-400, WINDOW_HEIGHT-400, 200, 200, 0);
+        } else if (state == 2) {
+            g.drawRoundRect(300, 300, WINDOW_WIDTH-600, WINDOW_HEIGHT-600, 30, 30);
+            g.setColor(Color.LIGHT_GRAY);
+            g.fillRoundRect(300, 300, WINDOW_WIDTH-600, WINDOW_HEIGHT-600, 30, 30);
+            g.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 46));
+            g.setColor(Color.BLACK);
+            displayCenteredText(g, "Player 2 is the winner! Congrats!", WINDOW_WIDTH-400, WINDOW_HEIGHT-400, 200, 200, 0);
         }
     }
 

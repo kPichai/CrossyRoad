@@ -1,11 +1,11 @@
 public class GameObject {
     private int x;
     private int y;
-    private int dx;
-    private int dy;
+    private double dx;
+    private double dy;
     private boolean isShown;
 
-    public GameObject(int x, int y, int dx, int dy, boolean isShown) {
+    public GameObject(int x, int y, double dx, double dy, boolean isShown) {
         this.x = x;
         this.y = y;
         this.dx = dx;
@@ -21,24 +21,28 @@ public class GameObject {
         return y;
     }
 
-    public int getDx() {
+    public double getDx() {
         return dx;
     }
 
-    public int getDy() {
+    public double getDy() {
         return dy;
     }
 
-    public void setDx(int dx) {
+    public void setDx(double dx) {
         this.dx = dx;
     }
 
-    public void setDy(int dy) {
+    public void setDy(double dy) {
         this.dy = dy;
     }
 
     public boolean isShown() {
         return isShown;
+    }
+    public void resetDxDy() {
+        dx = 0;
+        dy = 0;
     }
 
     public void setShown(boolean isShown) {
@@ -49,6 +53,4 @@ public class GameObject {
         x += dx;
         y += dy;
     }
-
-
 }
