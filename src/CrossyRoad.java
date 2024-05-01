@@ -21,27 +21,27 @@ public class CrossyRoad implements ActionListener, KeyListener {
         // Figure out way to randomize and create all the obstacles
         obstaclesToRight = new ArrayList<Obstacle>();
         obstaclesToLeft = new ArrayList<Obstacle>();
-        obstaclesToRight.add(new Obstacle(0, 703, 5, 0, 0));
+        obstaclesToRight.add(new Obstacle(0, 703, 5, 0, 0, false));
         for (int i = 0; i < 30; i++) {
             if (i < 15) {
-                obstaclesToRight.add(new Obstacle(generateNewCarMovingRight(obstaclesToRight.get(obstaclesToRight.size() - 1).getX()), 703, 5, 0, 0));
+                obstaclesToRight.add(new Obstacle(generateNewCarMovingRight(obstaclesToRight.get(obstaclesToRight.size() - 1).getX()), 703, 5, 0, 0, false));
             } else {
                 if (i == 15) {
-                    obstaclesToRight.add(new Obstacle(0, 248, 5, 0, 0));
+                    obstaclesToRight.add(new Obstacle(0, 248, 5, 0, 0, false));
                 } else {
-                    obstaclesToRight.add(new Obstacle(generateNewCarMovingRight(obstaclesToRight.get(obstaclesToRight.size() - 1).getX()), 248, 5, 0, 0));
+                    obstaclesToRight.add(new Obstacle(generateNewCarMovingRight(obstaclesToRight.get(obstaclesToRight.size() - 1).getX()), 248, 5, 0, 0, false));
                 }
             }
         }
-        obstaclesToLeft.add(new Obstacle(1763, 797, -5, 0, 0));
+        obstaclesToLeft.add(new Obstacle(1763, 797, -5, 0, 0, true));
         for (int i = 0; i < 30; i++) {
             if (i < 15) {
-                obstaclesToLeft.add(new Obstacle(generateNewCarMovingLeft(obstaclesToLeft.get(obstaclesToLeft.size() - 1).getX()), 797, -5, 0, 0));
+                obstaclesToLeft.add(new Obstacle(generateNewCarMovingLeft(obstaclesToLeft.get(obstaclesToLeft.size() - 1).getX()), 797, -5, 0, 0, true));
             } else {
                 if (i == 15) {
-                    obstaclesToLeft.add(new Obstacle(1763, 342, -5, 0, 0));
+                    obstaclesToLeft.add(new Obstacle(1763, 342, -5, 0, 0, true));
                 } else {
-                    obstaclesToLeft.add(new Obstacle(generateNewCarMovingLeft(obstaclesToLeft.get(obstaclesToLeft.size() - 1).getX()), 342, -5, 0, 0));
+                    obstaclesToLeft.add(new Obstacle(generateNewCarMovingLeft(obstaclesToLeft.get(obstaclesToLeft.size() - 1).getX()), 342, -5, 0, 0, true));
                 }
             }
         }
@@ -51,12 +51,12 @@ public class CrossyRoad implements ActionListener, KeyListener {
         clock.start();
     }
 
-    public int generateNewCarMovingRight(int x) {
-        return x - ((int)(Math.random()*175) + 70);
+    public double generateNewCarMovingRight(double x) {
+        return x - ((int)(Math.random()*250) + 75);
     }
 
-    public int generateNewCarMovingLeft(int x) {
-        return x + ((int)(Math.random()*175) + 70);
+    public double generateNewCarMovingLeft(double x) {
+        return x + ((int)(Math.random()*250) + 75);
     }
 
     public void checkWinner() {
@@ -97,19 +97,31 @@ public class CrossyRoad implements ActionListener, KeyListener {
         for (int i = 0; i < obstaclesToRight.size(); i++) {
             Obstacle o = obstaclesToRight.get(i);
             if (o.getX() > 1727) {
-                int y = o.getY();
+                double y = o.getY();
                 obstaclesToRight.remove(i);
+                int j;
+                for (j = obstaclesToRight.size() - 1; j >= 0; j--) {
+                    if (obstaclesToRight.get(j).getY() == y) {
+                        break;
+                    }
+                }
                 i--;
-                obstaclesToRight.add(new Obstacle(generateNewCarMovingRight(obstaclesToRight.get(obstaclesToRight.size()-1).getX()), y, 5, 0, 0));
+                obstaclesToRight.add(new Obstacle(generateNewCarMovingRight(obstaclesToRight.get(j).getX()), y, 5, 0, 0, false));
             }
         }
         for (int i = 0; i < obstaclesToLeft.size(); i++) {
             Obstacle o = obstaclesToLeft.get(i);
             if (o.getX() < -60) {
-                int y = o.getY();
+                double y = o.getY();
                 obstaclesToLeft.remove(i);
+                int j;
+                for (j = obstaclesToLeft.size() - 1; j >= 0; j--) {
+                    if (obstaclesToLeft.get(j).getY() == y) {
+                        break;
+                    }
+                }
                 i--;
-                obstaclesToLeft.add(new Obstacle(generateNewCarMovingLeft(obstaclesToLeft.get(obstaclesToLeft.size()-1).getX()), y, -5, 0, 0));
+                obstaclesToLeft.add(new Obstacle(generateNewCarMovingLeft(obstaclesToLeft.get(j).getX()), y, -5, 0, 0, true));
             }
         }
     }
@@ -212,28 +224,28 @@ public class CrossyRoad implements ActionListener, KeyListener {
         if (gameState == -1) {
             switch (e.getKeyCode()) {
                 case KeyEvent.VK_W:
-                    playerOne.setDy(-2);
+                    playerOne.setDy(-2.5);
                     break;
                 case KeyEvent.VK_A:
-                    playerOne.setDx(-2);
+                    playerOne.setDx(-2.5);
                     break;
                 case KeyEvent.VK_S:
-                    playerOne.setDy(2);
+                    playerOne.setDy(2.5);
                     break;
                 case KeyEvent.VK_D:
-                    playerOne.setDx(2);
+                    playerOne.setDx(2.5);
                     break;
                 case KeyEvent.VK_LEFT:
-                    playerTwo.setDx(-2);
+                    playerTwo.setDx(-2.5);
                     break;
                 case KeyEvent.VK_RIGHT:
-                    playerTwo.setDx(2);
+                    playerTwo.setDx(2.5);
                     break;
                 case KeyEvent.VK_UP:
-                    playerTwo.setDy(-2);
+                    playerTwo.setDy(-2.5);
                     break;
                 case KeyEvent.VK_DOWN:
-                    playerTwo.setDy(2);
+                    playerTwo.setDy(2.5);
                     break;
             }
         }

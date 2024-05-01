@@ -8,7 +8,7 @@ public class Player extends GameObject {
 
     private Image image;
 
-    public Player(int x, int y, int dx, int dy, boolean isPlayerOne) {
+    public Player(double x, double y, double dx, double dy, boolean isPlayerOne) {
         super(x, y, dx, dy, true);
         this.isPlayerOne = isPlayerOne;
         this.health = 1;
@@ -31,9 +31,9 @@ public class Player extends GameObject {
     public void drawPlayer(Graphics g, CrossyRoadViewer window) {
         if (getIsShown()) {
             if (getDx() <= 0) {
-                g.drawImage(image, getX(), getY(), 70, 70, window);
+                g.drawImage(image, (int)getX(), (int)getY(), 70, 70, window);
             } else {
-                g.drawImage(image, getX() + (70), getY(), -70, 70, window);
+                g.drawImage(image, (int)getX() + (70), (int)getY(), -70, 70, window);
             }
         }
     }

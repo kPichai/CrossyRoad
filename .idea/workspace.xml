@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a7f3-ad89-433e-a4a4-8d26130804b4" name="Changes" comment="Added a map, more gamestates, fixed the winner function, changed movement dynamics. To-do: fix double cars, fix game becoming easier over time, add collisions, add egg blaster.">
+    <list default="true" id="dc33a7f3-ad89-433e-a4a4-8d26130804b4" name="Changes" comment="Added collisions, stopped cars from moving and the losing player dissapearing when the game is over. Cleaned up some logic and code.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CrossyRoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrossyRoad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EggBlaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EggBlaster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Obstacle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Obstacle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
@@ -49,15 +50,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CrossyRoad.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CrossyRoad.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Resources" />
@@ -118,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714416956103</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added collisions, stopped cars from moving and the losing player dissapearing when the game is over. Cleaned up some logic and code.">
+      <option name="closed" value="true" />
+      <created>1714522960672</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714522960672</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -126,6 +135,7 @@
     <MESSAGE value="Added movement and more cars / that repeat infinitely." />
     <MESSAGE value="Added better movement / gameStates" />
     <MESSAGE value="Added a map, more gamestates, fixed the winner function, changed movement dynamics. To-do: fix double cars, fix game becoming easier over time, add collisions, add egg blaster." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a map, more gamestates, fixed the winner function, changed movement dynamics. To-do: fix double cars, fix game becoming easier over time, add collisions, add egg blaster." />
+    <MESSAGE value="Added collisions, stopped cars from moving and the losing player dissapearing when the game is over. Cleaned up some logic and code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added collisions, stopped cars from moving and the losing player dissapearing when the game is over. Cleaned up some logic and code." />
   </component>
 </project>

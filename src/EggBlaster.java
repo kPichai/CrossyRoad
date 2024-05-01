@@ -5,7 +5,7 @@ public class EggBlaster extends GameObject {
     private boolean isInUse;
     private int eggsLeft;
 
-    public EggBlaster(int x, int y, int dx, int dy) {
+    public EggBlaster(double x, double y, double dx, double dy) {
         super(x, y, dx, dy, false);
         this.isInUse = false;
         this.eggsLeft = INITIAL_EGG_AMOUNT;

@@ -1,11 +1,11 @@
 public class GameObject {
-    private int x;
-    private int y;
+    private double x;
+    private double y;
     private double dx;
     private double dy;
     private boolean isShown;
 
-    public GameObject(int x, int y, double dx, double dy, boolean isShown) {
+    public GameObject(double x, double y, double dx, double dy, boolean isShown) {
         this.x = x;
         this.y = y;
         this.dx = dx;
@@ -13,11 +13,11 @@ public class GameObject {
         this.isShown = isShown;
     }
 
-    public int getX() {
+    public double getX() {
         return x;
     }
 
-    public int getY() {
+    public double getY() {
         return y;
     }
 
@@ -51,7 +51,7 @@ public class GameObject {
     }
 
     public static void checkCollision(Obstacle o, Player p) {
-        int oX = o.getX(), oY = o.getY(), pX = p.getX(), pY = p.getY();
+        double oX = o.getX(), oY = o.getY(), pX = p.getX(), pY = p.getY();
         if (oX > pX + 70 || oX + 60 < pX) {
             return;
         }
