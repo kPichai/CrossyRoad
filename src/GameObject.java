@@ -29,6 +29,10 @@ public class GameObject {
         return dy;
     }
 
+    public boolean getIsShown() {
+        return isShown;
+    }
+
     public void setDx(double dx) {
         this.dx = dx;
     }
@@ -37,17 +41,30 @@ public class GameObject {
         this.dy = dy;
     }
 
-    public boolean isShown() {
-        return isShown;
+    public void setIsShown(boolean isShown) {
+        this.isShown = isShown;
     }
+
     public void resetDxDy() {
         dx = 0;
         dy = 0;
     }
 
-    public void setShown(boolean isShown) {
-        this.isShown = isShown;
+    public static void checkCollision(Obstacle o, Player p) {
+        int oX = o.getX(), oY = o.getY(), pX = p.getX(), pY = p.getY();
+        if (oX > pX + 70 || oX + 60 < pX) {
+            return;
+        }
+        if (oY + 40 < pY || oY > pY + 70) {
+            return;
+        }
+        p.setHealth(0);
     }
+
+    // TO-DO:
+//    public static void checkCollision(EggBlaster o, Player p) {
+//
+//    }
 
     public void move() {
         x += dx;

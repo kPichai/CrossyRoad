@@ -27,7 +27,7 @@ public class Obstacle extends GameObject {
     }
 
     public void drawObstacle(Graphics g, CrossyRoadViewer window) {
-        if (getDx() > 0) {
+        if (getDx() >= 0) {
             g.drawImage(type, this.getX(), this.getY(), 60, 40, window);
         } else if (getDx() < 0) {
             g.drawImage(type, getX() + (60), getY(), -60, 40, window);

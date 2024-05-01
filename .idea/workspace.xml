@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a7f3-ad89-433e-a4a4-8d26130804b4" name="Changes" comment="Added better movement / gameStates">
-      <change afterPath="$PROJECT_DIR$/Resources/game_background.png" afterDir="false" />
+    <list default="true" id="dc33a7f3-ad89-433e-a4a4-8d26130804b4" name="Changes" comment="Added a map, more gamestates, fixed the winner function, changed movement dynamics. To-do: fix double cars, fix game becoming easier over time, add collisions, add egg blaster.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CrossyRoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrossyRoad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrossyRoadViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrossyRoadViewer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Obstacle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Obstacle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,15 +49,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CrossyRoad.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CrossyRoad.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Resources" />
@@ -110,13 +110,22 @@
       <option name="project" value="LOCAL" />
       <updated>1714077908716</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added a map, more gamestates, fixed the winner function, changed movement dynamics. To-do: fix double cars, fix game becoming easier over time, add collisions, add egg blaster.">
+      <option name="closed" value="true" />
+      <created>1714416956103</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714416956103</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="started all the classes." />
     <MESSAGE value="Added movement and more cars / that repeat infinitely." />
     <MESSAGE value="Added better movement / gameStates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added better movement / gameStates" />
+    <MESSAGE value="Added a map, more gamestates, fixed the winner function, changed movement dynamics. To-do: fix double cars, fix game becoming easier over time, add collisions, add egg blaster." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a map, more gamestates, fixed the winner function, changed movement dynamics. To-do: fix double cars, fix game becoming easier over time, add collisions, add egg blaster." />
   </component>
 </project>

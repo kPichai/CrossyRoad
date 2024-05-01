@@ -29,11 +29,12 @@ public class Player extends GameObject {
     }
 
     public void drawPlayer(Graphics g, CrossyRoadViewer window) {
-        if (getDx() <= 0) {
-            g.drawImage(image, getX(), getY(), 70, 70, window);
-        } else {
-            g.drawImage(image, getX() + (70), getY(), -70, 70, window);
+        if (getIsShown()) {
+            if (getDx() <= 0) {
+                g.drawImage(image, getX(), getY(), 70, 70, window);
+            } else {
+                g.drawImage(image, getX() + (70), getY(), -70, 70, window);
+            }
         }
-
     }
 }

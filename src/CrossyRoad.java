@@ -65,20 +65,31 @@ public class CrossyRoad implements ActionListener, KeyListener {
         }
         if (playerOne.getY() <= 0) {
             gameState = 1;
-            playerOne.resetDxDy();
-            playerTwo.resetDxDy();
+            playerTwo.setIsShown(false);
+            pauseGameMovement();
+            return;
         } else if (playerTwo.getY() <= 0) {
             gameState = 2;
-            playerOne.resetDxDy();
-            playerTwo.resetDxDy();
-        } else if (playerOne.getHealth() == 0) {
+            playerOne.setIsShown(false);
+            pauseGameMovement();
+            return;
+        }
+        for (Obstacle o: obstaclesToRight) {
+            GameObject.checkCollision(o, playerOne);
+            GameObject.checkCollision(o, playerTwo);
+        }
+        for (Obstacle o: obstaclesToLeft) {
+            GameObject.checkCollision(o, playerOne);
+            GameObject.checkCollision(o, playerTwo);
+        }
+        if (playerOne.getHealth() == 0) {
             gameState = 2;
-            playerOne.resetDxDy();
-            playerTwo.resetDxDy();
+            playerOne.setIsShown(false);
+            pauseGameMovement();
         } else if (playerTwo.getHealth() == 0) {
             gameState = 1;
-            playerOne.resetDxDy();
-            playerTwo.resetDxDy();
+            playerTwo.setIsShown(false);
+            pauseGameMovement();
         }
     }
 
@@ -101,6 +112,18 @@ public class CrossyRoad implements ActionListener, KeyListener {
                 obstaclesToLeft.add(new Obstacle(generateNewCarMovingLeft(obstaclesToLeft.get(obstaclesToLeft.size()-1).getX()), y, -5, 0, 0));
             }
         }
+    }
+
+    public void pauseGameMovement() {
+        for (Obstacle o: obstaclesToLeft) {
+            o.resetDxDy();
+        }
+        for (Obstacle o: obstaclesToRight) {
+            o.resetDxDy();
+        }
+        playerOne.resetDxDy();
+        playerTwo.resetDxDy();
+        window.repaint();
     }
 
     public int getGameState() {
@@ -136,15 +159,13 @@ public class CrossyRoad implements ActionListener, KeyListener {
         if (time > 5400) {
             gameState = -1;
         }
-        if (!(gameState == 1 || gameState == 2)) {
-            for (Obstacle o: obstaclesToRight) {
-                o.move();
-            }
-            for (Obstacle o: obstaclesToLeft) {
-                o.move();
-            }
-            checkObstacles();
+        for (Obstacle o: obstaclesToRight) {
+            o.move();
         }
+        for (Obstacle o: obstaclesToLeft) {
+            o.move();
+        }
+        checkObstacles();
         playerOne.move();
         playerTwo.move();
         checkWinner();
