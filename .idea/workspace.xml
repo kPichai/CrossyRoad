@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a7f3-ad89-433e-a4a4-8d26130804b4" name="Changes" comment="Added collisions, stopped cars from moving and the losing player dissapearing when the game is over. Cleaned up some logic and code.">
+    <list default="true" id="dc33a7f3-ad89-433e-a4a4-8d26130804b4" name="Changes" comment="Fixed collisions and car spawning, increased difficulty of game, did lots of code fluency stuff.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CrossyRoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrossyRoad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EggBlaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EggBlaster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Obstacle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Obstacle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714522960672</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixed collisions and car spawning, increased difficulty of game, did lots of code fluency stuff.">
+      <option name="closed" value="true" />
+      <created>1714582692803</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714582692803</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -136,6 +142,7 @@
     <MESSAGE value="Added better movement / gameStates" />
     <MESSAGE value="Added a map, more gamestates, fixed the winner function, changed movement dynamics. To-do: fix double cars, fix game becoming easier over time, add collisions, add egg blaster." />
     <MESSAGE value="Added collisions, stopped cars from moving and the losing player dissapearing when the game is over. Cleaned up some logic and code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added collisions, stopped cars from moving and the losing player dissapearing when the game is over. Cleaned up some logic and code." />
+    <MESSAGE value="Fixed collisions and car spawning, increased difficulty of game, did lots of code fluency stuff." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed collisions and car spawning, increased difficulty of game, did lots of code fluency stuff." />
   </component>
 </project>

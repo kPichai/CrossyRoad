@@ -11,7 +11,7 @@ public class Player extends GameObject {
     public Player(double x, double y, double dx, double dy, boolean isPlayerOne) {
         super(x, y, dx, dy, true);
         this.isPlayerOne = isPlayerOne;
-        this.health = 1;
+        this.health = 4;
         image = new ImageIcon("Resources/player_icon.png").getImage();
         eggBlaster = new EggBlaster(this.getX(), this.getY(), 0, 0);
     }

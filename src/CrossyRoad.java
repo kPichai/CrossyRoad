@@ -52,11 +52,11 @@ public class CrossyRoad implements ActionListener, KeyListener {
     }
 
     public double generateNewCarMovingRight(double x) {
-        return x - ((int)(Math.random()*250) + 75);
+        return x - ((int)(Math.random()*350) + 300);
     }
 
     public double generateNewCarMovingLeft(double x) {
-        return x + ((int)(Math.random()*250) + 75);
+        return x + ((int)(Math.random()*350) + 300);
     }
 
     public void checkWinner() {
@@ -224,28 +224,28 @@ public class CrossyRoad implements ActionListener, KeyListener {
         if (gameState == -1) {
             switch (e.getKeyCode()) {
                 case KeyEvent.VK_W:
-                    playerOne.setDy(-2.5);
+                    playerOne.setDy(-3);
                     break;
                 case KeyEvent.VK_A:
-                    playerOne.setDx(-2.5);
+                    playerOne.setDx(-3);
                     break;
                 case KeyEvent.VK_S:
-                    playerOne.setDy(2.5);
+                    playerOne.setDy(3);
                     break;
                 case KeyEvent.VK_D:
-                    playerOne.setDx(2.5);
+                    playerOne.setDx(3);
                     break;
                 case KeyEvent.VK_LEFT:
-                    playerTwo.setDx(-2.5);
+                    playerTwo.setDx(-3);
                     break;
                 case KeyEvent.VK_RIGHT:
-                    playerTwo.setDx(2.5);
+                    playerTwo.setDx(3);
                     break;
                 case KeyEvent.VK_UP:
-                    playerTwo.setDy(-2.5);
+                    playerTwo.setDy(-3);
                     break;
                 case KeyEvent.VK_DOWN:
-                    playerTwo.setDy(2.5);
+                    playerTwo.setDy(3);
                     break;
             }
         }
