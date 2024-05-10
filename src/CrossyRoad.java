@@ -60,11 +60,11 @@ public class CrossyRoad implements ActionListener, KeyListener {
     }
 
     public double generateNewCarMovingRight(double x) {
-        return x - ((int)(Math.random()*450) + 145);
+        return x - ((int)(Math.random()*425) + 125);
     }
 
     public double generateNewCarMovingLeft(double x) {
-        return x + ((int)(Math.random()*450) + 145);
+        return x + ((int)(Math.random()*425) + 125);
     }
 
     public void checkWinner() {

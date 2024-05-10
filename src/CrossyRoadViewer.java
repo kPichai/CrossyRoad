@@ -18,7 +18,7 @@ public class CrossyRoadViewer extends JFrame {
         this.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         this.setVisible(true);
 
-        createBufferStrategy(2);
+        createBufferStrategy(5);
     }
 
     public CrossyRoad getGame() {

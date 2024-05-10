@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc33a7f3-ad89-433e-a4a4-8d26130804b4" name="Changes" comment="Fixed movement edge cases, added the egg blaster, implemented an ability to restart the game. Tweaked the difficult to make it the perfect amount.">
-      <change afterPath="$PROJECT_DIR$/Resources/reticle.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CrossyRoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrossyRoad.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CrossyRoadViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrossyRoadViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EggBlaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EggBlaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Obstacle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Obstacle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,15 +47,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CrossyRoad.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CrossyRoad.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Resources" />
@@ -153,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715312628149</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fixed movement edge cases, added the egg blaster, implemented an ability to restart the game. Tweaked the difficult to make it the perfect amount.">
+      <option name="closed" value="true" />
+      <created>1715317901088</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1715317901088</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
