@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a7f3-ad89-433e-a4a4-8d26130804b4" name="Changes" comment="Fixed movement">
+    <list default="true" id="dc33a7f3-ad89-433e-a4a4-8d26130804b4" name="Changes" comment="Fixed movement edge cases, added the egg blaster, implemented an ability to restart the game. Tweaked the difficult to make it the perfect amount.">
       <change afterPath="$PROJECT_DIR$/Resources/reticle.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CrossyRoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrossyRoad.java" afterDir="false" />
@@ -145,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714687533770</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed movement edge cases, added the egg blaster, implemented an ability to restart the game. Tweaked the difficult to make it the perfect amount.">
+      <option name="closed" value="true" />
+      <created>1715312628149</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715312628149</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -156,6 +164,7 @@
     <MESSAGE value="Added collisions, stopped cars from moving and the losing player dissapearing when the game is over. Cleaned up some logic and code." />
     <MESSAGE value="Fixed collisions and car spawning, increased difficulty of game, did lots of code fluency stuff." />
     <MESSAGE value="Fixed movement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed movement" />
+    <MESSAGE value="Fixed movement edge cases, added the egg blaster, implemented an ability to restart the game. Tweaked the difficult to make it the perfect amount." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed movement edge cases, added the egg blaster, implemented an ability to restart the game. Tweaked the difficult to make it the perfect amount." />
   </component>
 </project>
