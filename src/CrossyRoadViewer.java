@@ -21,6 +21,10 @@ public class CrossyRoadViewer extends JFrame {
         createBufferStrategy(2);
     }
 
+    public CrossyRoad getGame() {
+        return game;
+    }
+
     public void drawGameObjects(Graphics g) {
         for (Obstacle o: game.getObstaclesToRight()) {
             o.drawObstacle(g, this);
@@ -30,6 +34,19 @@ public class CrossyRoadViewer extends JFrame {
         }
         game.getPlayerOne().drawPlayer(g, this);
         game.getPlayerTwo().drawPlayer(g, this);
+    }
+
+    public void drawPlayerInfo(Graphics g) {
+        g.drawRoundRect(0, WINDOW_HEIGHT - 60 - BANNER_HEIGHT, 120, 60, 10, 10);
+        g.drawRoundRect(WINDOW_WIDTH - 120, WINDOW_HEIGHT - 60 - BANNER_HEIGHT, 120, 60, 10, 10);
+        g.setColor(Color.WHITE);
+        g.fillRoundRect(0, WINDOW_HEIGHT - 60 - BANNER_HEIGHT, 120, 60, 10, 10);
+        g.fillRoundRect(WINDOW_WIDTH - 120, WINDOW_HEIGHT - 60 - BANNER_HEIGHT, 120, 60, 10, 10);
+        g.drawRoundRect(10, WINDOW_HEIGHT - 50 - BANNER_HEIGHT, 100 - (25*(4 - game.getPlayerOne().getHealth())), 28, 10, 10);
+        g.drawRoundRect(WINDOW_WIDTH - 110, WINDOW_HEIGHT - 50 - BANNER_HEIGHT, 100 - (25*(4 - game.getPlayerTwo().getHealth())), 28, 10, 10);
+        g.setColor(Color.green);
+        g.fillRoundRect(10, WINDOW_HEIGHT - 50 - BANNER_HEIGHT, 100 - (25*(4 - game.getPlayerOne().getHealth())), 28, 10, 10);
+        g.fillRoundRect(WINDOW_WIDTH - 110, WINDOW_HEIGHT - 50 - BANNER_HEIGHT, 100 - (25*(4 - game.getPlayerTwo().getHealth())), 28, 10, 10);
     }
 
     public void drawBackground(Graphics g) {
@@ -81,6 +98,7 @@ public class CrossyRoadViewer extends JFrame {
         drawBackground(g);
         drawGameObjects(g);
         drawGameState(g);
+        drawPlayerInfo(g);
     }
 
     @Override

@@ -41,6 +41,5 @@ public class Obstacle extends GameObject {
                 g.drawImage(type, (int)this.getX() + (60), (int)this.getY(), -60, 40, window);
             }
         }
-
     }
 }
