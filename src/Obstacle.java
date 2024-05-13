@@ -1,45 +1,31 @@
+// Created by Kieran Pichai
+
 import javax.swing.*;
 import java.awt.*;
 
 public class Obstacle extends GameObject {
-    private Image[] obstacleTypes;
+
+    // All instance variables for the current cars
     private Image type;
     private boolean isLeftCar;
-    private int imageNum;
 
+    // Constructor that initializes all positions and movement speeds / orientations of obstacle
     public Obstacle(double x, double y, int dx, int dy, int obstacleType, boolean isLeftCar) {
         super(x, y, dx, dy, true);
-        obstacleTypes = new Image[2];
         this.isLeftCar = isLeftCar;
-        // quick fix for now, change later
-        obstacleTypes[0] = new ImageIcon("Resources/car_1.png").getImage();
-        obstacleTypes[1] = new ImageIcon("Resources/car_1.png").getImage();
-        if (obstacleType == 1) {
-            type = obstacleTypes[0];
-        } else {
-            // imageNum = (int)(Math.random()*6) + 1;
-            // type = obstacleTypes[imageNum];
-            type = obstacleTypes[1];
-        }
+
+        // Loads car image in
+        type = new ImageIcon("Resources/car_1.png").getImage();
     }
 
-    public int getImageNum() {
-        return imageNum;
-    }
-
+    // Draws the car based off of specific parameters
     public void drawObstacle(Graphics g, CrossyRoadViewer window) {
+
+        // Draws the car depending on its orientation (left facing or right facing)
         if (isLeftCar) {
-            if (getDx() > 0) {
-                g.drawImage(type, (int)this.getX(), (int)this.getY(), 60, 40, window);
-            } else if (getDx() <= 0) {
-                g.drawImage(type, (int)this.getX() + (60), (int)this.getY(), -60, 40, window);
-            }
+            g.drawImage(type, (int) this.getX() + (60), (int) this.getY(), -60, 40, window);
         } else {
-            if (getDx() >= 0) {
-                g.drawImage(type, (int)this.getX(), (int)this.getY(), 60, 40, window);
-            } else if (getDx() < 0) {
-                g.drawImage(type, (int)this.getX() + (60), (int)this.getY(), -60, 40, window);
-            }
+            g.drawImage(type, (int)this.getX(), (int)this.getY(), 60, 40, window);
         }
     }
 }
